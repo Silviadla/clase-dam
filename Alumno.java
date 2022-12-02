@@ -48,6 +48,19 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        int lenMatricula = numeroMatricula.length();
+        int lenNombre= nombre.length();
+        String nombreGithub= null;
+        if(lenNombre < 3){
+            nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
+        }
+        else if(lenMatricula < 4){
+            nombreGithub = nombre.substring(0, 3) + numeroMatricula.substring(0, lenMatricula);
+        }
+        else{
+            nombreGithub = nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        }
+    
+        return nombreGithub;
     }
 }
