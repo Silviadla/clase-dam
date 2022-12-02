@@ -54,6 +54,13 @@ public class Alumno {
         if(lenNombre < 3){
             nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
         }
+        if(lenMatricula < 4)
+        {
+            nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
+        }
+        else if(lenNombre < 3){
+            nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0, 4);
+        }
         else if(lenMatricula < 4){
             nombreGithub = nombre.substring(0, 3) + numeroMatricula.substring(0, lenMatricula);
         }
