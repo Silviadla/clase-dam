@@ -51,11 +51,7 @@ public class Alumno {
         int lenMatricula = numeroMatricula.length();
         int lenNombre= nombre.length();
         String nombreGithub= null;
-        if(lenNombre < 3){
-            nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
-        }
-        if(lenMatricula < 4)
-        {
+        if(lenNombre < 3 && lenMatricula < 4 ){
             nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
         }
         else if(lenNombre < 3){
