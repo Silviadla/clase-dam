@@ -28,6 +28,20 @@ public class Alumno {
     public String getNombre() {
         return nombre;
     }
+    
+    /**
+     * Devuelve la matrícula del alumno
+     */
+    public String getMatricula(){
+        return numeroMatricula;
+    }
+    
+    /**
+     * Devuelve la matrícula del alumno
+     */
+    public int getEdad(){
+        return edad;
+    }
 
     /**
      * Cambia el nombre del alumno
@@ -49,8 +63,8 @@ public class Alumno {
      */
     public String getNombreUsuarioGithub() {
         int lenMatricula = numeroMatricula.length();
-        int lenNombre= nombre.length();
-        String nombreGithub= null;
+        int lenNombre = nombre.length();
+        String nombreGithub = null;
         if(lenNombre < 3 && lenMatricula < 4 ){
             nombreGithub = nombre.substring(0, lenNombre) + numeroMatricula.substring(0,lenMatricula );
         }
@@ -63,7 +77,7 @@ public class Alumno {
         else{
             nombreGithub = nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
         }
-    
+
         return nombreGithub;
     }
 }

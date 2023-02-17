@@ -1,13 +1,13 @@
 import java.util.*;
 
 public class ClaseDam {
-    
+
     private String tutor;
     private String aula;
     private String centro;
     private ArrayList<Alumno> alumnos;
     private int capacidad;
-    
+
     /**
      * Crea una clase
      */
@@ -30,35 +30,35 @@ public class ClaseDam {
             alumnos.add(nuevoAlumno);
         }
     }
-    
+
     /**
      * Devuelve el numero de alumnos matriculados
      */
     public int getNumeroDeAlumnos() {
         return alumnos.size();
     }
-    
+
     /**
      * Fija el aula donde se da la clase
      */
     public void setAula(String aulaClase) {
         aula = aulaClase;
     }
-    
+
     /**
      * Fija el centro (el instituto) al que pertenece la clase
      */
     public void setCentro(String centroClase) {
         centro = centroClase;
     }
-    
+
     /**
      * Fija el tutor de la clase
      */
     public void setTutor(String nombreTutor) {
         tutor = nombreTutor;
     }
-    
+
     /**
      * Imprime por pantalla los detalles de la clase
      */
@@ -71,5 +71,16 @@ public class ClaseDam {
             alumno.imprimeDetalles();
         }
         System.out.println("Numero de alumnos: " + getNumeroDeAlumnos());
+    }
+
+    /**
+     * Imprime por pantalla los detalles de la clase
+     */
+    public void imprimirListaNumeradaDeAlumnos(){
+        int posicion=1;
+        for(Alumno alumno : alumnos){
+            System.out.println(posicion + ". " + alumno.getNombre() + " (" + alumno.getMatricula() + ") - " + alumno.getEdad() + " años");
+            posicion += 1;
+        }
     }
 }
